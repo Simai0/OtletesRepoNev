@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+    background-image: radial-gradient( rgba(0, 150, 0, 0.75), black 120%);
+    height: 100vh;
+    color: white;
+    font: 1.3rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #C8C8C8;
+    margin: 0px 5px 5px 5px;
+}
+
+#menuszalag {
+    width: 100%;
+    background-color: black;
+    color: rgb(58, 173, 77);
+    height: 50px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logoxd {
+    display: inline;
+    position: relative;
+    margin-top: 50px;
+}
+
+#menuszalag ul {
+    display: inline;
+    position: relative;
+    margin-top: 0px;
+    float: left;
+}
+
+#menuszalag ul li {
+    display: inline;
+    padding: 10px;
+    line-height: 50px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#hello {
+    width: 500px;
+    float: left;
+    margin-right: 20px;
+    transition-duration: 5s;
+}
+
+#hello:hover {
+    cursor: zoom-out;
+    float: none;
+    width: 600px;
+}

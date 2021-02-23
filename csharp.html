@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C#</title>
+    <link rel="stylesheet" href="csharp.css">
+    <script src="javageci.js"></script>
+</head>
+
+<body>
+    <div id="menuszalag">
+
+        <ul>
+            <li>
+                <img src="Kepek/cmd.JPG" style="position: absolute; width: 5%; top: 13px; left: 10px;"><a href="index.html">Kezdőlap</a>
+            </li>
+            <li>
+                <a href="#elozmenyek">Előzmények</a>
+            </li>
+            <li>
+                <a href="#szabvanyositas">Szabványosítás</a>
+            </li>
+            <li>
+                <a href="#attekintes">Áttekintés</a>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <p> A C# (kiejtése: szí-sárp, de ismert a cisz elnevezés is) a Microsoft által a .NET keretrendszer részeként kifejlesztett objektumorientált programozási nyelv. A nyelv alapjául a C++ és a Java szolgált.</p>
+        <h3 id="elozmenyek">> Előzmények</h3>
+        <p>A 90-es években a Microsoft a saját Java keretkörnyezetét a saját operációsrendszer-specifikus függvényeivel és szolgáltatásaival bővítette ki, amire viszont nem volt engedélye (a Java licencét birtokló) Sun Microsystemstől. A Microsoft-féle Javára
+            fejlesztett alkalmazások nem lettek volna futtathatók más rendszereken, ami ellenkezik a Java platform-függetlenségre vonatkozó alapelvével. A Sun végül beperelte a Microsoftot, és ezt követően a Microsoft a Java eltávolítására kényszerült
+            a Windows rendszerekből (természetesen a Java-t a továbbiakban is lehet külön rendszerként telepíteni). A Microsoft egy saját keretrendszer fejlesztésébe kezdett. Ez lett a .NET (kiejtése: dotnet), és ehhez a keretrendszerhez adták ki programnyelvként
+            a C# első verzióját. A későbbiekben ezt a nyelvet úgy fejlesztették tovább, hogy meglegyen az egyensúly a programozó nyelvi szabadsága és a gyors alkalmazásfejlesztés lehetősége között. Rengeteg hivatalosan kiadott bővítmény létezik hozzá,
+            amelyek a kódolást könnyebbé teszik.</p>
+        <h3 id="szabvanyositas">> Szabványosítás</h3>
+        <p>A Microsoft benyújtotta a C# nyelvi specifikációját az ECMA-hoz formális szabványosításra. 2001 decemberében az ECMA kiadta az ECMA-334 C# Language Specification szabványt, 2003-ban pedig ISO szabvány lett (ISO/IEC 23270). Bár a Mono Project egy
+            nagyrészt kompatibilis nyílt forráskódú C# fordítót állított elő (lehetővé téve az ilyen kódok futtatását Linux és Macintosh rendszereken), a nyelv Windows operációs rendszereken kívüli használata nem terjedt el, mivel az osztálykönyvtárakat
+            szolgáltató .NET Framework portolása más rendszerek alá még kezdetleges stádiumban van.[forrás?] Ugyanakkor a Mono az utóbbi években rohamos fejlődésnek indult, amit elősegített a Microsoft és a Novell (a Mono „anyacége”) együttműködése a
+            Microsoft Silverlight technológiájának Linux illetve Macintosh rendszerekkel kompatibilis változatának – a Moonlightnak – a készítésekor.</p>
+        <h3 id="attekintes">> Áttekintés</h3>
+        <p>A C# az a programozási nyelv, ami a legközvetlenebb módon tükrözi az alatta működő, minden .NET programot futtató .NET keretrendszert, valamint erősen függ is attól: nincsen nem menedzselt, natív módban futó C# program. A primitív adattípusai
+            objektumok, a .NET típusok megfelelői. Szemétgyűjtést használ, valamint az absztrakcióinak többsége (osztályok, interfészek, delegáltak, kivételek…) a .NET futtatórendszert használja közvetlen módon.</p>
+
+        <p> A C vagy C++ nyelvhez hasonlítva a C# több korlátozást és továbbfejlesztést is tartalmaz. A lehetőségei közül néhány:</p>
+        <ul>
+            <li>A mutatók és a nem ellenőrzött aritmetika csak egy speciális, nem biztonságos módban (unsafe mode) használható. A legtöbb objektum-hozzáférés csak biztonságos hivatkozásokon keresztül tehető meg, és az aritmetikai műveletek debug módban túlcsordulás
+                szempontjából ellenőrzöttek.
+            </li>
+            <li>Az objektumok nem szabadíthatók fel közvetlen módon, ehelyett a szemétgyűjtő szabadítja fel őket, mikor már nincs rájuk hivatkozás. Ez a módszer kizárja a nem létező objektumokra való hivatkozás lehetőségét.
+            </li>
+            <li>A destruktorok (~) elérhetőek. A megfelelően megírt IDisposable interfész (Disposable programozási minta), aminek a lefutását garantálja using blokk, együtt kikényszerítheti az azonnali felszabadítást az osztályon belüli natív erőforrások
+                esetében. A nem natív erőforrások felszabadítását ebben az esetben is a szemétgyűjtő (Garbage Collector) végzi. A finalizerek szintén rendelkezésre állnak, de nem váltanak ki azonnali felszabadítást. Finalizer a Dispose eljárás javasolt
+                implementációs módozatában nem fut le, mivel az ajánlás szerint a szemétgyűjtőt utasítani kell a finalizer hívás kihagyására.</li>
+            <li>A nyelv csak egyszeres öröklődést támogat, de egy osztály több interfészt is megvalósíthat.</li>
+            <li>A C# sokkal típusbiztosabb, mint a C++. Az egyetlen implicit konverzió a biztonságos konverzió, úgy mint az egészek tágabb intervallumba konvertálása vagy a leszármazott osztályok alaposztályba konvertálása. Nincs implicit konverzió az egészek
+                és a logikai típus (boolean) között, a felsorolás tagok és az egészek között. Nincsenek void mutatók (bár az Object osztályra mutató mutatók hasonlóak), valamint bármely, a felhasználó által definiált implicit konverziót explicit módon
+                meg kell jelölni.</li>
+            <li>A felsorolás adattagjai a saját névterükben helyezkednek el.</li>
+            <li>A 2.0-s verziótól felfelé már rendelkezik a generikus programozás néhány eszközével.</li>
+            <li>Tulajdonságok (Properties) használhatók, amelyek úgy tesznek lehetővé kódfuttatást mezők beállításakor és olvasásakor, hogy közben az adattagok szintaxisát használja.</li>
+        </ul>
+    </div>
+    <h3>Így néz ki egy "Hello World" program C#-ban:</h3>
+    <img src="kepek/helloc.JPG" alt="Hello World C#-ban" id="hello">
+
+</body>
+
+</html>

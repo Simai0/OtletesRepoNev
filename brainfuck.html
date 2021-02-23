@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="brainfuck.css">
+</head>
+
+<body>
+    <div id="menuszalag">
+
+        <ul>
+            <li>
+                <img src="Kepek/cmd.JPG" style="position: absolute; width: 5%; top: 13px; left: 10px;"><a
+                    href="index.html">Kezdőlap</a>
+            </li>
+            <li>
+                <a href="#nyelv">A nyelv szerkezete</a>
+            </li>
+            <li>
+                <a href="#asd">IdeValamiMégKéneUgyanDeNincs</a>
+            </li>
+         
+        </ul>
+    </div>
+
+    <div>
+        <p>A Brainfuck programozási nyelv egy nyolc utasítást tartalmazó Turing-teljes[1] (Turing-complete) ezoterikus
+            programozási nyelv. A Brainfuck szó az angol brain (=agy) és fuck (=szexuálisan közösülni, durván behatolni)
+            szavakból áll össze, ami a programok nehéz megírására utal. </p>
+        <h3 id="nyelv">> A nyelv szerkezete</h3>
+        <p>A Brainfuck nyelvnek egy univerzális byte mutatója van, aminek a neve „pointer”, ami szabadon mozoghat egy 30
+            000 byte nagyságú tömbben, melynek alapértékei nullák. A pointer a tömb elején indul.</p>
+            <p>A nyelv nyolc parancsát egy-egy karakter reprezentálja:</p>
+            <p>>  	A pointer növelése eggyel</p>
+            <p><	A pointer csökkentése eggyel</p>
+            <p>+	A pointernél levő byte növelése eggyel</p>
+            <p>-	A pointernél levő byte csökkentése eggyel</p>
+            <p>.	A pointernél levő byte kiírása</p>
+            <p>,	Byte bekérése és a pointernél tárolása</p>
+            <p>[	Ugrás a következő, megfelelő ] jel utánig, ha a pointer alatti byte nulla.</p>
+            <p>]	Ugrás az előző, megfelelő [ jelig.</p>
+            <h3 id="asd">> Ide még egyébként kellene valami, csak kicsit nagyon nincs ötletem:((</h3>
+            <p>Nem valami ismert ez a nyelv, kevés az anyag hozzá (｡•́︿•̀｡)</p>
+            <h3 >Így néz ki egy "Hello World" program Brainfuckban:</h3>
+    <img src="kepek/hellobrainfuck.JPG" alt="Hello World Brainfuckban" id="hello">
+        </div>
+
+</body>
+
+</html>
