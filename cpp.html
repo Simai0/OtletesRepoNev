@@ -7,15 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C++</title>
     <link rel="stylesheet" href="cpp.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="jquery-1.12.4.js"></script>
+    <script src="jquery-ui.js"></script>
 </head>
 
 <body>
+    <div id="cmdoverlay" style="display: block;">
+        <div id="divcontainer" style="height: 100vh;">
+            <div id="makeitmove">
+                <div id="drag">Parancssor</div>
+                <div id="mainarea">
+                    <div class="parancsok">Microsoft Windows [Version 10.0.19042.804]<br> (c) 2020 Microsoft Corporation. Minden jog fenntartva.<br><a style="color: green;">Segítséghez, írja be, hogy 'help'</a><br>&nbsp;</div><textarea class="cmdarea" oninput='$("#mainarea").scrollTop($("#mainarea")[0].scrollHeight);this.style.height = "";this.style.height = this.scrollHeight + "px"'>C:/Users/Pisti></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="menuszalag">
 
         <ul>
             <li>
-                <img src="Kepek/cmd.JPG" style="position: absolute; width: 5%; top: 13px; left: 10px;"><a
-                    href="index.html">Kezdőlap</a>
+                <img src="Kepek/cmd.JPG" style="position: absolute; width: 5%; top: 13px; left: 10px;"><a href="index.html">Kezdőlap</a>
             </li>
             <li>
                 <a href="#tortenete">Története</a>
@@ -29,38 +41,296 @@
         </ul>
     </div>
     <div>
-        <p>A C++ egy általános célú, magas szintű programozási nyelv. Támogatja a procedurális, az objektumorientált és
-            a generikus programozást, valamint az adatabsztrakciót. Napjainkban szinte minden operációs rendszer alá
-            létezik C++ fordító. A nyelv a C programozási nyelv hatékonyságának megőrzése mellett törekszik a könnyebben
-            megírható, karbantartható és újrahasznosítható kód írására, ez azonban sok kompromisszummal jár, erre utal,
-            hogy általánosan elterjedt a mid-level minősítése is, bár szigorú értelemben véve egyértelműen magas szintű.
+        <p>A C++ egy általános célú, magas szintű programozási nyelv. Támogatja a procedurális, az objektumorientált és a generikus programozást, valamint az adatabsztrakciót. Napjainkban szinte minden operációs rendszer alá létezik C++ fordító. A nyelv
+            a C programozási nyelv hatékonyságának megőrzése mellett törekszik a könnyebben megírható, karbantartható és újrahasznosítható kód írására, ez azonban sok kompromisszummal jár, erre utal, hogy általánosan elterjedt a mid-level minősítése is,
+            bár szigorú értelemben véve egyértelműen magas szintű.
         </p>
         <h3 id="tortenete">> Története</h3>
-        <p>Bjarne Stroustrup kezdte el a C++ programozási nyelv fejlesztését a C programozási nyelv
-            kiterjesztéseként, más nyelvekből véve át megoldásokat (Simula67, Algol68), ötleteket (ADA). A nyelv első,
-            nem kísérleti körülmények közt való használatára 1983-ban került sor, 1987-ben pedig nyilvánvalóvá vált,
-            hogy a C++ szabványosítása elkerülhetetlen. Ez a folyamat 1991 júniusában kezdődött el, amikor az ISO
-            szabványosítási kezdeményezés részévé vált. A C++ programozási nyelv szabványát 1998-ban hagyták jóvá
-            ISO/IEC 14882:1998 néven, az aktuális, 2017-es változat kódjelzése ISO/IEC 14882:2017.</p>
+        <p>Bjarne Stroustrup kezdte el a C++ programozási nyelv fejlesztését a C programozási nyelv kiterjesztéseként, más nyelvekből véve át megoldásokat (Simula67, Algol68), ötleteket (ADA). A nyelv első, nem kísérleti körülmények közt való használatára
+            1983-ban került sor, 1987-ben pedig nyilvánvalóvá vált, hogy a C++ szabványosítása elkerülhetetlen. Ez a folyamat 1991 júniusában kezdődött el, amikor az ISO szabványosítási kezdeményezés részévé vált. A C++ programozási nyelv szabványát 1998-ban
+            hagyták jóvá ISO/IEC 14882:1998 néven, az aktuális, 2017-es változat kódjelzése ISO/IEC 14882:2017.</p>
 
         <h3 id="forditok">> Fordítók, fejlesztőeszközök</h3>
-        <p>Windows operációs rendszeren tanuláshoz megfelelő – és ingyenes – eszköz a Code::Blocks. Haladó szinten
-            kényelmes választás a Visual C++ Express Edition, amely ingyen letölthető a Microsoft oldaláról, de több
-            helyen bevallottan eltér a szabványtól.
+        <p>Windows operációs rendszeren tanuláshoz megfelelő – és ingyenes – eszköz a Code::Blocks. Haladó szinten kényelmes választás a Visual C++ Express Edition, amely ingyen letölthető a Microsoft oldaláról, de több helyen bevallottan eltér a szabványtól.
+            Linux/UNIX alatt megszokottabb a konzolból való fordítás (ez a lehetőség Windowsnál is megvan). Erre az említett rendszerekben általában a GNU Compiler Collection g++ programját használjuk, illetve grafikus fejlesztőeszközként rendelkezésünkre
+            áll a KDevelop is, illetve a fentebb már említett Code::Blocks is elérhető Linux alatt. A legtöbb fordító – ha nem adjuk meg külön – néhány esetben eltér a szabványtól, így optimalizáltabb kódot hozhatnak létre. Természetesen minden esetben
+            lehetőség van a szabvány szerinti fordításra.</p>
 
-            Linux/UNIX alatt megszokottabb a konzolból való fordítás (ez a lehetőség Windowsnál is megvan). Erre az
-            említett rendszerekben általában a GNU Compiler Collection g++ programját használjuk, illetve grafikus
-            fejlesztőeszközként rendelkezésünkre áll a KDevelop is, illetve a fentebb már említett Code::Blocks is
-            elérhető Linux alatt.
-
-            A legtöbb fordító – ha nem adjuk meg külön – néhány esetben eltér a szabványtól, így optimalizáltabb kódot
-            hozhatnak létre. Természetesen minden esetben lehetőség van a szabvány szerinti fordításra.</p>
- 
         <h3 id="nev">> Név eredete</h3>
-        <p>Nevét Rick Mascitti találta ki. A C++ név kifejezi, hogy a nyelv a C kibővítése: az inkrementáló operátorra utal a ++.</div></p>
+        <p>Nevét Rick Mascitti találta ki. A C++ név kifejezi, hogy a nyelv a C kibővítése: az inkrementáló operátorra utal a ++.</div>
+    </p>
     </div>
     <h3>Így néz ki egy "Hello World" program C++-ban:</h3>
     <img src="kepek/hellocpp.jpg" alt="Hello World C++-ban" id="hello">
+
+    <script>
+        var cmdstyle = localStorage.getItem("cmdstyle");
+        var cmdarea = localStorage.getItem("cmdarea");
+
+        if (cmdstyle != null) {
+            console.log("beállítva1");
+            document.getElementById("makeitmove").style.cssText = cmdstyle;
+        }
+        if (cmdarea != null) {
+            console.log("beállítva2");
+            document.getElementsByClassName("parancsok")[0].innerHTML = cmdarea;
+        }
+
+        $(document).ready(function() {
+            document.getElementById("makeitmove").style.cssText += 'float: right; bottom: 0px';
+            $("#makeitmove").draggable({
+                containment: "#divcontainer",
+                handle: '#drag'
+            }).resizable({
+                resize: function() {
+                    $('#mainarea').scrollTop($('#mainarea')[0].scrollHeight);
+                }
+            });
+        });
+
+        var area = document.getElementsByClassName("cmdarea")[0];
+        var mainpanel = document.getElementsByClassName("mainxd")[0];
+
+        var parancsok = document.getElementsByClassName("parancsok")[0];
+
+        const mainarea = document.getElementById("mainarea")
+
+        var ckonyvtar = "C:/Users/Pisti>";
+
+        $(".cmdarea").on('keydown', function(e) {
+            if (!area.value.includes(ckonyvtar)) {
+                area.value = ckonyvtar;
+            }
+            if (e.key === 'Enter' || e.keyCode === 13) {
+
+                var fullparancs = area.value;
+                var parancs = fullparancs.replace(ckonyvtar, "");
+
+                console.log("fullparancs:" + fullparancs);
+                console.log("parancs:" + parancs);
+
+                if (parancs.trim() == "" || parancs.trim() == "\n") {
+                    parancsok.appendChild(parseHTML("<br>" + fullparancs))
+                } else {
+                    var vissza = "";
+                    var ptrim = parancs.replace(/^[ ]+|[ ]+$/g, '')
+                    var psplit = ptrim.split(" ");
+                    if (parancs.startsWith("clr")) {
+                        parancsok.innerHTML = "";
+                    } else if (ptrim.startsWith("help")) {
+                        var psplit = ptrim.split(" ");
+                        if (psplit[1] == undefined) {
+                            vissza = "<br>További segítségért, írd, hogy 'help {parancs neve}'<br>dir - oldalak listázása<br>cd - belépés egy adott oldalra<br>webset - weboldal beállításainak módosítása (háttérszín, szövegszín, stb)<br>&nbsp;"
+                        } else if (psplit[1] == "cd") {
+                            vissza = '<br>Használat: cd {mappa}'
+                        } else if (psplit[1] == "webset") {
+                            vissza = "<br>Weboldal beállításainak módosítása:<br>&nbsp<br>-color - Szövegszín<br>--Használat: color {szín}<br>-bgcolor - Háttérszín<br>--Használat: bgcolor {szín}<br>-glow - Szöveg világítása<br>--Használat: glow {ki/be}<br>&nbsp;<br>Példa: webset color red"
+                        } else {
+                            vissza = "<br>Ehhez nem tudok segítséget adni."
+                        }
+                    } else if (ptrim.startsWith("webset")) {
+                        if (ptrim.includes(" ")) {
+                            var psplit = ptrim.split(" ");
+                            if (psplit[1] == "color") {
+                                console.log("a:" + psplit[2])
+                                if (psplit[2] == undefined) {
+                                    vissza = "<br>-color - Szövegszín<br>--Használat: color {szín}<br>&nbsp;"
+                                } else if (psplit[2] == "red") {
+                                    vissza = "<br>Szöveg színe beállítva pirosra<br>&nbsp;";
+                                    localStorage.setItem("szovegszin", "red");
+                                } else if (psplit[2] == "green") {
+                                    vissza = "<br>Szöveg színe beállítva zöldre<br>&nbsp;";
+                                    localStorage.setItem("szovegszin", "green");
+                                } else if (psplit[2] == "blue") {
+                                    vissza = "<br>Szöveg színe beállítva kékre<br>&nbsp;";
+                                    localStorage.setItem("szovegszin", "blue");
+                                } else if (psplit[2] == "black") {
+                                    vissza = "<br>Szöveg színe beállítva feketére<br>&nbsp;";
+                                    localStorage.setItem("szovegszin", "black");
+                                } else if (psplit[2] == "white") {
+                                    vissza = "<br>Szöveg színe beállítva fehérre<br>&nbsp;";
+                                    localStorage.setItem("szovegszin", "white");
+                                } else {
+                                    vissza = "<br>Nem találtam ilyen színt<br>&nbsp;";
+                                }
+                                updateSzinek();
+                            } else if (psplit[1] == "bgcolor") {
+                                console.log("a:" + psplit[2])
+                                if (psplit[2] == undefined) {
+                                    vissza = "<br>-bgcolor - Háttérszín<br>--Használat: color {szín}<br>&nbsp;"
+                                } else if (psplit[2] == "red") {
+                                    vissza = "<br>Háttér színe beállítva pirosra<br>&nbsp;";
+                                    localStorage.setItem("hatterszin", "red");
+                                } else if (psplit[2] == "green") {
+                                    vissza = "<br>Háttér színe beállítva zöldre<br>&nbsp;";
+                                    localStorage.setItem("hatterszin", "green");
+                                } else if (psplit[2] == "blue") {
+                                    vissza = "<br>Háttér színe beállítva kékre<br>&nbsp;";
+                                    localStorage.setItem("hatterszin", "blue");
+                                } else if (psplit[2] == "black") {
+                                    vissza = "<br>Háttér színe beállítva feketére<br>&nbsp;";
+                                    localStorage.setItem("hatterszin", "black");
+                                } else if (psplit[2] == "white") {
+                                    vissza = "<br>Háttér színe beállítva fehérre<br>&nbsp;";
+                                    localStorage.setItem("hatterszin", "white");
+                                } else {
+                                    vissza = "<br>Nem találtam ilyen színt<br>&nbsp;";
+                                }
+                                updateSzinek();
+                            } else if (psplit[1] == "glow") {
+                                console.log("a:" + psplit[2])
+                                if (psplit[2] == undefined) {
+                                    vissza = "<br>-glow - Szöveg világítása<br>--Használat: glow {ki/be}<br>&nbsp;"
+                                } else if (psplit[2] == "be") {
+                                    vissza = "<br>Szöveg világítása bekapcsolva<br>&nbsp;";
+                                    localStorage.setItem("glow", "be");
+                                } else if (psplit[2] == "ki") {
+                                    vissza = "<br>Szöveg világítása kikapcsolva<br>&nbsp;";
+                                    localStorage.setItem("glow", "ki");
+                                }
+                                updateSzinek();
+                            } else {
+                                vissza = "<br>Nem található ilyen utasítás<br>&nbsp;"
+                            }
+                        } else {
+                            vissza = "<br>Weboldal beállításainak módosítása:<br>&nbsp<br>-color - Szövegszín<br>--Használat: color {szín}<br>-bgcolor - Háttérszín<br>--Használat: bgcolor {szín}<br>-glow - Szöveg világítása<br>--Használat: glow {ki/be}<br>&nbsp;<br>Példa: webset color red"
+                        }
+                    } else if (ptrim.startsWith("dir")) {
+                        vissza = "<br>2021. 01. 23.  22:14               174 csharp<br>2021. 01. 23.  22:15               230 cpp<br>2021. 01. 23.  22:17               144 brainfuck<br>2021. 01. 23.  22:19               124 index<br>&nbsp;"
+                    } else if (ptrim.startsWith("cd")) {
+                        var psplit = ptrim.split(" ");
+                        if (psplit[1] == undefined) {
+                            vissza = " " + ckonyvtar + "<br>&nbsp;";
+                        } else if (psplit[1] == "index" || psplit[1] == "index.html") {
+                            localStorage.setItem("cmdstyle", document.getElementById("makeitmove").style.cssText);
+                            localStorage.setItem("cmdarea", document.getElementsByClassName("parancsok")[0].innerHTML);
+                            //setCookie("cmdHTML", document.getElementById("cmdoverlay").innerHTML, 7);
+                            window.open("index.html", "_self");
+                            console.log("mentve");
+                        } else if (psplit[1] == "csharp" || psplit[1] == "csharp.html") {
+                            localStorage.setItem("cmdstyle", document.getElementById("makeitmove").style.cssText);
+                            localStorage.setItem("cmdarea", document.getElementsByClassName("parancsok")[0].innerHTML);
+                            //setCookie("cmdHTML", document.getElementById("cmdoverlay").innerHTML, 7);
+                            window.open("csharp.html", "_self");
+                            console.log("mentve");
+                        } else if (psplit[1] == "cpp" || psplit[1] == "cpp.html") {
+                            localStorage.setItem("cmdstyle", document.getElementById("makeitmove").style.cssText);
+                            localStorage.setItem("cmdarea", document.getElementsByClassName("parancsok")[0].innerHTML);
+                            //setCookie("cmdHTML", document.getElementById("cmdoverlay").innerHTML, 7);
+                            window.open("cpp.html", "_self");
+                            console.log("mentve");
+                        } else if (psplit[1] == "brainfuck" || psplit[1] == "brainfuck.html") {
+                            localStorage.setItem("cmdstyle", document.getElementById("makeitmove").style.cssText);
+                            localStorage.setItem("cmdarea", document.getElementsByClassName("parancsok")[0].innerHTML);
+                            //setCookie("cmdHTML", document.getElementById("cmdoverlay").innerHTML, 7);
+                            window.open("brainfuck.html", "_self");
+                            console.log("mentve");
+                        } else {
+                            vissza = "<br>a rendszer nem találja a megadott elérési utat."
+                        }
+                    } else {
+                        vissza = `<br>'${ptrim.includes(" ") ? psplit[0].trim() : parancs.trim()}' is not recognized as an internal or external command,
+                        operable program or batch file.<br>&nbsp;`
+                    }
+                    parancsok.appendChild(parseHTML("<br>" + fullparancs))
+                    parancsok.appendChild(parseHTML(vissza))
+
+                    localStorage.setItem("cmdstyle", document.getElementById("makeitmove").style.cssText);
+                    localStorage.setItem("cmdarea", document.getElementsByClassName("parancsok")[0].innerHTML);
+                }
+
+                area.value = ckonyvtar;
+            }
+        });
+        $(".cmdarea").on('keyup', function(e) {
+            if (!area.value.includes(ckonyvtar)) {
+                area.value = ckonyvtar;
+            }
+            if (e.key === 'Enter' || e.keyCode === 13) {
+                area.value = ckonyvtar;
+            }
+        });
+
+        function updateSzinek() {
+
+            var szovegszin = localStorage.getItem("szovegszin");
+
+            var hatterszin = localStorage.getItem("hatterszin");
+
+            var glow = localStorage.getItem("glow");
+
+            if (szovegszin == null) {
+                localStorage.setItem("szovegszin", "white");
+            } else {
+                $("a").css({
+                    'color': szovegszin
+                });
+                $("p").css({
+                    'color': szovegszin
+                });
+                $("h1").css({
+                    'color': szovegszin
+                });
+                $("h2").css({
+                    'color': szovegszin
+                });
+                $("h3").css({
+                    'color': szovegszin
+                });
+            }
+
+            if (hatterszin == null) {
+                localStorage.setItem("hatterszin", "green");
+            } else if (hatterszin == "red") {
+                $("body").css({
+                    'background': 'radial-gradient(rgba(150, 0, 0, 0.75), black 120%)'
+                });
+            } else if (hatterszin == "blue") {
+                $("body").css({
+                    'background': 'radial-gradient(rgba(0, 0, 150, 0.75), black 120%)'
+                });
+            } else if (hatterszin == "black") {
+                $("body").css({
+                    'background': 'radial-gradient(rgba(0, 0, 0, 0.75), black 120%)'
+                });
+            } else if (hatterszin == "white") {
+                $("body").css({
+                    'background': 'radial-gradient(rgba(255, 255, 255, 0.75), black 120%)'
+                });
+            } else {
+                $("body").css({
+                    'background': 'radial-gradient(rgba(0, 150, 0, 0.75), black 120%)'
+                });
+            }
+
+            if (glow == null) {
+                localStorage.setItem("glow", "be");
+            } else if (glow == "be") {
+                $("#szoveg *").css({
+                    'text-shadow': '0 0 5px #C8C8C8'
+                });
+                $("#menuszalag *").css({
+                    'text-shadow': '0 0 5px #C8C8C8'
+                });
+            } else if (glow == "ki") {
+                $("#szoveg *").css({
+                    'text-shadow': '0 0 0px #C8C8C8'
+                });
+                $("#menuszalag *").css({
+                    'text-shadow': '0 0 0px #C8C8C8'
+                });
+            }
+
+        }
+
+        updateSzinek();
+
+        function parseHTML(html) {
+            var t = document.createElement('template');
+            t.innerHTML = html;
+            return t.content.cloneNode(true);
+        }
+    </script>
 </body>
 
 </html>
